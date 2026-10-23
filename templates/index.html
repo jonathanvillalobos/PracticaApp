@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <!-- Variables enviadas desde server.py -->
+        <h1 class="display-4">{{ titulo }}</h1>
+        <p class="lead">{{ mensaje }}</p>
+        <hr class="my-4">
+
+        <h3>Biblioteca Universitaria Central</h3>
+        <p>
+            <strong>Propósito:</strong> Nuestra misión es apoyar el aprendizaje, la docencia y la investigación facilitando el acceso a recursos de información de alta calidad y ofreciendo espacios adecuados para el estudio.
+        </p>
+
+        <div class="card mt-4">
+            <div class="card-header font-weight-bold">
+                Horario General de Atención
+            </div>
+            <div class="card-body">
+                <p class="card-text">Lunes a Viernes: 07:00 h - 21:00 h</p>
+                <p class="card-text">Sábados: 08:00 h - 14:00 h</p>
+                <p class="card-text text-muted">Domingos y días festivos: Cerrado</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

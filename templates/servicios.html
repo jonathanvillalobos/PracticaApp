@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12 mb-4">
+        <h2>{{ titulo }}</h2>
+        <p class="lead">{{ mensaje }}</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <h5>Préstamo de Libros</h5>
+                <p class="mb-1">Servicio de préstamo a domicilio e interbibliotecario disponible para alumnos, docentes e investigadores credencializados.</p>
+            </li>
+            <li class="list-group-item">
+                <h5>Consulta en Sala</h5>
+                <p class="mb-1">Acceso libre a estantería abierta e instalaciones con áreas individuales y colaborativas para lectura en sala.</p>
+            </li>
+            <li class="list-group-item">
+                <h5>Acceso a Recursos Digitales</h5>
+                <p class="mb-1">Terminales con conexión a internet para la búsqueda en el catálogo en línea y repositorios institucionales.</p>
+            </li>
+            <li class="list-group-item">
+                <h5>Orientación Bibliográfica</h5>
+                <p class="mb-1">Asesoría especializada por parte del personal bibiliotecario para la búsqueda y gestión de información científica.</p>
+            </li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
