@@ -1,28 +1,53 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<div class="row">
-    <div class="col-12">
-        <!-- Variables enviadas desde server.py -->
-        <h1 class="display-4">{{ titulo }}</h1>
-        <p class="lead">{{ mensaje }}</p>
-        <hr class="my-4">
-
-        <h3>Biblioteca Universitaria Central</h3>
-        <p>
-            <strong>Propósito:</strong> Nuestra misión es apoyar el aprendizaje, la docencia y la investigación facilitando el acceso a recursos de información de alta calidad y ofreciendo espacios adecuados para el estudio.
-        </p>
-
-        <div class="card mt-4">
-            <div class="card-header font-weight-bold">
-                Horario General de Atención
-            </div>
-            <div class="card-body">
-                <p class="card-text">Lunes a Viernes: 07:00 h - 21:00 h</p>
-                <p class="card-text">Sábados: 08:00 h - 14:00 h</p>
-                <p class="card-text text-muted">Domingos y días festivos: Cerrado</p>
-            </div>
-        </div>
+<section class="hero-panel">
+    <div class="hero-content">
+        <span class="eyebrow"><span aria-hidden="true">✦</span> Un otoño para descubrir</span>
+        <h1>{{ titulo }}<br><span>nuevas historias.</span></h1>
+        <p class="hero-lead">{{ mensaje }} Aquí encontrarás recursos, orientación y un lugar para hacer crecer tus ideas.</p>
+        <a class="button-primary" href="{{ url_for('catalogo') }}">Explorar el catálogo <span aria-hidden="true">→</span></a>
     </div>
-</div>
+    <div class="hero-art" aria-hidden="true">
+        <div class="moon"></div>
+        <div class="book-stack">
+            <span class="book book-one"></span>
+            <span class="book book-two"></span>
+            <span class="book book-three"></span>
+        </div>
+        <span class="floating-star star-one">✦</span>
+        <span class="floating-star star-two">✧</span>
+        <span class="floating-leaf">✳</span>
+    </div>
+    <span class="hero-corner" aria-hidden="true">☾</span>
+</section>
+
+<section class="welcome-row">
+    <div>
+        <span class="eyebrow eyebrow-dark">Bienvenida</span>
+        <h2>Un lugar tranquilo para<br>grandes ideas.</h2>
+        <p>Apoyamos el aprendizaje, la docencia y la investigación con recursos de calidad y espacios pensados para concentrarte.</p>
+    </div>
+    <a class="text-link" href="{{ url_for('servicios') }}">Conoce nuestros servicios <span aria-hidden="true">→</span></a>
+</section>
+
+<section class="hours-card" aria-label="Horario de atención">
+    <div class="hours-icon" aria-hidden="true">◷</div>
+    <div class="hours-heading">
+        <span class="eyebrow eyebrow-dark">Planea tu visita</span>
+        <h2>Horario de atención</h2>
+    </div>
+    <div class="hours-detail">
+        <span>Lunes a viernes</span>
+        <strong>07:00 – 21:00 h</strong>
+    </div>
+    <div class="hours-detail">
+        <span>Sábados</span>
+        <strong>08:00 – 14:00 h</strong>
+    </div>
+    <div class="hours-detail hours-closed">
+        <span>Domingos y festivos</span>
+        <strong>Cerrado</strong>
+    </div>
+</section>
 {% endblock %}

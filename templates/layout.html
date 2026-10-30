@@ -3,43 +3,62 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{ titulo }}</title>
+        <meta name="theme-color" content="#f7f4ee">
+        <meta name="description" content="Biblioteca Universitaria Central: recursos, servicios y espacios para aprender, investigar y descubrir nuevas historias.">
+        <title>{{ titulo }} | Biblioteca Universitaria Central</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     </head>
-    <body>        
-        <!-- Menú de navegación horizontal con estilos oscuros -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="{{ url_for('index') }}">Biblioteca Universitaria</a>
-                
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('index') }}">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('catalogo') }}">Catálogo</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('servicios') }}">Servicios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('contacto') }}">Contacto</a>
-                        </li>
-                    </ul>
+    <body>
+        <header class="site-header">
+            <div class="container site-shell">
+                <div class="brand-row">
+                    <a class="brand" href="{{ url_for('index') }}">
+                        <span class="brand-mark" aria-hidden="true">B</span>
+                        <span class="brand-copy">
+                            <span class="brand-name">Biblioteca Universitaria</span>
+                            <span class="brand-subtitle">Central · Un espacio para descubrir</span>
+                        </span>
+                    </a>
+                    <span class="season-note"><span aria-hidden="true">✦</span> Temporada de historias</span>
                 </div>
+                <nav class="navbar navbar-expand-lg site-nav" aria-label="Navegación principal">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú de navegación">
+                        <span class="navbar-toggler-icon"></span>
+                        <span class="menu-label">Explorar</span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link{% if request.endpoint == 'index' %} active{% endif %}" href="{{ url_for('index') }}"{% if request.endpoint == 'index' %} aria-current="page"{% endif %}>Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link{% if request.endpoint == 'servicios' %} active{% endif %}" href="{{ url_for('servicios') }}"{% if request.endpoint == 'servicios' %} aria-current="page"{% endif %}>Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link{% if request.endpoint == 'catalogo' %} active{% endif %}" href="{{ url_for('catalogo') }}"{% if request.endpoint == 'catalogo' %} aria-current="page"{% endif %}>Catálogo</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link{% if request.endpoint == 'contacto' %} active{% endif %}" href="{{ url_for('contacto') }}"{% if request.endpoint == 'contacto' %} aria-current="page"{% endif %}>Contacto</a>
+                            </li>
+                        </ul>
+                        <span class="nav-season-mark" aria-hidden="true">☾</span>
+                    </div>
+                </nav>
             </div>
-        </nav>
+        </header>
 
-        <!-- Contenedor principal con container-fluid -->
-        <div class="container-fluid">
-            {% block content %} 
+        <main class="container site-main">
+            {% block content %}
             {% endblock %}
-        </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-inner">
+                <span>Biblioteca Universitaria Central</span>
+                <span>Un buen libro siempre encuentra el momento. <span aria-hidden="true">✦</span></span>
+            </div>
+        </footer>
 
         <!-- Scripts necesarios para el funcionamiento del menú colapsable -->
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

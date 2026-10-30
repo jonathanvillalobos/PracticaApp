@@ -1,38 +1,37 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<div class="row">
-    <div class="col-12 mb-4">
-        <h2>{{ titulo }}</h2>
-        <p class="lead">{{ mensaje }}</p>
-    </div>
-</div>
+<header class="page-heading">
+    <span class="eyebrow eyebrow-dark">Estamos para ayudarte</span>
+    <h1>{{ titulo }}</h1>
+    <p>{{ mensaje }}</p>
+</header>
 
 <div class="row">
     <div class="col-md-6 mb-3">
-        <div class="card">
-            <div class="card-header bg-primary text-white">
-                Información Institucional
+        <section class="info-card">
+            <h2 class="info-card-header">Información institucional</h2>
+            <div class="info-card-body">
+                <ul class="contact-list">
+                    <li><strong>Dirección:</strong> Av. Universidad #123, Ciudad Universitaria, C.P. 01000</li>
+                    <li><strong>Correo:</strong> contacto.biblioteca@universidad.edu.mx</li>
+                    <li><strong>Teléfono:</strong> (55) 5555-0199 ext. 204</li>
+                </ul>
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"><strong>Dirección:</strong> Av. Universidad #123, Ciudad Universitaria, C.P. 01000</li>
-                <li class="list-group-item"><strong>Correo Institucional:</strong> contacto.biblioteca@universidad.edu.mx</li>
-                <li class="list-group-item"><strong>Teléfono:</strong> (55) 5555-0199 ext. 204</li>
-            </ul>
-        </div>
+        </section>
     </div>
 
     <div class="col-md-6 mb-3">
-        <div class="card">
-            <div class="card-header bg-secondary text-white">
-                Horario de Atención Presencial
+        <section class="info-card">
+            <h2 class="info-card-header">Horario de atención presencial</h2>
+            <div class="info-card-body">
+                <ul class="contact-list">
+                    <li><strong>Lunes a viernes:</strong> 07:00 h – 21:00 h</li>
+                    <li><strong>Sábados:</strong> 08:00 h – 14:00 h</li>
+                    <li>Servicios digitales disponibles las 24 horas en el portal institucional.</li>
+                </ul>
             </div>
-            <div class="card-body">
-                <p><strong>Lunes a Viernes:</strong> 07:00 h - 21:00 h</p>
-                <p><strong>Sábados:</strong> 08:00 h - 14:00 h</p>
-                <p class="text-muted">Servicios digitales disponibles las 24 horas a través del portal institucional.</p>
-            </div>
-        </div>
+        </section>
     </div>
 </div>
 {% endblock %}

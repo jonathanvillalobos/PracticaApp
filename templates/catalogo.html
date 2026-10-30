@@ -1,48 +1,40 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<div class="row">
-    <div class="col-12 mb-4">
-        <h2>{{ titulo }}</h2>
-        <p class="lead">{{ mensaje }}</p>
-    </div>
-</div>
+<header class="page-heading">
+    <span class="eyebrow eyebrow-dark">Colecciones</span>
+    <h1>{{ titulo }}</h1>
+    <p>{{ mensaje }}</p>
+</header>
 
-<div class="row">
-    <div class="col-md-6 mb-3">
-        <div class="card h-100">
-            <div class="card-body">
-                <h5 class="card-title">Libros</h5>
-                <p class="card-text">Colección de textos académicos, literatura, manuales y obras de referencia en formato impreso para todas las facultades.</p>
-            </div>
-        </div>
+<div class="row resource-grid">
+    <div class="col-md-6 col-lg-3 mb-4">
+        <article class="resource-card">
+            <span class="resource-icon" aria-hidden="true">▤</span>
+            <h2>Libros</h2>
+            <p>Textos académicos, literatura y obras de referencia para todas las facultades.</p>
+        </article>
     </div>
-    
-    <div class="col-md-6 mb-3">
-        <div class="card h-100">
-            <div class="card-body">
-                <h5 class="card-title">Revistas</h5>
-                <p class="card-text">Publicaciones periódicas científicas, académicas y de divulgación especializadas en diversas áreas del conocimiento.</p>
-            </div>
-        </div>
+    <div class="col-md-6 col-lg-3 mb-4">
+        <article class="resource-card">
+            <span class="resource-icon" aria-hidden="true">✧</span>
+            <h2>Revistas</h2>
+            <p>Publicaciones científicas, académicas y de divulgación en distintas disciplinas.</p>
+        </article>
     </div>
-
-    <div class="col-md-6 mb-3">
-        <div class="card h-100">
-            <div class="card-body">
-                <h5 class="card-title">Tesis</h5>
-                <p class="card-text">Trabajos de titulación de licenciatura, maestría y doctorado desarrollados por egresados de la universidad.</p>
-            </div>
-        </div>
+    <div class="col-md-6 col-lg-3 mb-4">
+        <article class="resource-card">
+            <span class="resource-icon" aria-hidden="true">⌑</span>
+            <h2>Tesis</h2>
+            <p>Trabajos de titulación de licenciatura, maestría y doctorado de nuestra comunidad.</p>
+        </article>
     </div>
-
-    <div class="col-md-6 mb-3">
-        <div class="card h-100">
-            <div class="card-body">
-                <h5 class="card-title">Recursos Digitales</h5>
-                <p class="card-text">Bases de datos, libros electrónicos y revistas digitales accesibles mediante la red universitaria.</p>
-            </div>
-        </div>
+    <div class="col-md-6 col-lg-3 mb-4">
+        <article class="resource-card">
+            <span class="resource-icon" aria-hidden="true">◈</span>
+            <h2>Recursos digitales</h2>
+            <p>Bases de datos, libros electrónicos y revistas digitales a tu alcance.</p>
+        </article>
     </div>
 </div>
 {% endblock %}

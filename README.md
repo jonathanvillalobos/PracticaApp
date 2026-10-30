@@ -19,9 +19,10 @@ Todas las rutas renderizan sus respectivas plantillas con `render_template()` y 
 Se implementó una plantilla base en `templates/layout.html` que contiene:
 * Estructura HTML5 y metadatos responsivos.
 * Referencia a la librería **Bootstrap 4.6.2**.
-* Menú de navegación horizontal con estilos oscuros (`navbar-dark bg-dark`).
+* Identidad visual otoñal con acentos sutiles de Halloween y estilos compartidos desde `static/styles.css`.
+* Navegación en una segunda línea, con la sección actual resaltada y menú adaptable a pantallas pequeñas.
 * Redirección dinámica mediante la función `url_for()` de Flask.
 * Bloque `{% block content %}` para la inserción de vistas hijas.
 
 ### 3. Vistas Hijas
-Cada vista hereda de `layout.html` mediante la etiqueta `{% extends "layout.html" %}` y encapsula su contenido en contenedores con la clase `.container-fluid`.
+Cada vista hereda de `layout.html` mediante la etiqueta `{% extends "layout.html" %}`. La página de inicio presenta una bienvenida y el horario de atención; las páginas de catálogo, servicios y contacto usan componentes visuales coherentes con la identidad del sitio.

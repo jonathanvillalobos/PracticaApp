@@ -1,33 +1,48 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<div class="row">
-    <div class="col-12 mb-4">
-        <h2>{{ titulo }}</h2>
-        <p class="lead">{{ mensaje }}</p>
-    </div>
-</div>
+<header class="page-heading">
+    <span class="eyebrow eyebrow-dark">A tu disposición</span>
+    <h1>{{ titulo }}</h1>
+    <p>{{ mensaje }}</p>
+</header>
 
 <div class="row">
-    <div class="col-12">
-        <ul class="list-group">
-            <li class="list-group-item">
-                <h5>Préstamo de Libros</h5>
-                <p class="mb-1">Servicio de préstamo a domicilio e interbibliotecario disponible para alumnos, docentes e investigadores credencializados.</p>
-            </li>
-            <li class="list-group-item">
-                <h5>Consulta en Sala</h5>
-                <p class="mb-1">Acceso libre a estantería abierta e instalaciones con áreas individuales y colaborativas para lectura en sala.</p>
-            </li>
-            <li class="list-group-item">
-                <h5>Acceso a Recursos Digitales</h5>
-                <p class="mb-1">Terminales con conexión a internet para la búsqueda en el catálogo en línea y repositorios institucionales.</p>
-            </li>
-            <li class="list-group-item">
-                <h5>Orientación Bibliográfica</h5>
-                <p class="mb-1">Asesoría especializada por parte del personal bibiliotecario para la búsqueda y gestión de información científica.</p>
-            </li>
-        </ul>
+    <div class="col-md-6 mb-4">
+        <article class="service-item">
+            <span class="service-number">01</span>
+            <div>
+                <h2>Préstamo de libros</h2>
+                <p>Préstamo a domicilio e interbibliotecario para alumnos, docentes e investigadores con credencial vigente.</p>
+            </div>
+        </article>
+    </div>
+    <div class="col-md-6 mb-4">
+        <article class="service-item">
+            <span class="service-number">02</span>
+            <div>
+                <h2>Consulta en sala</h2>
+                <p>Estantería abierta y áreas individuales o colaborativas para leer y estudiar con calma.</p>
+            </div>
+        </article>
+    </div>
+    <div class="col-md-6 mb-4">
+        <article class="service-item">
+            <span class="service-number">03</span>
+            <div>
+                <h2>Recursos digitales</h2>
+                <p>Terminales con conexión a internet para consultar el catálogo y los repositorios institucionales.</p>
+            </div>
+        </article>
+    </div>
+    <div class="col-md-6 mb-4">
+        <article class="service-item">
+            <span class="service-number">04</span>
+            <div>
+                <h2>Orientación bibliográfica</h2>
+                <p>Asesoría del personal bibliotecario para encontrar y gestionar información académica.</p>
+            </div>
+        </article>
     </div>
 </div>
 {% endblock %}
